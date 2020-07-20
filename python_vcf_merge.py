@@ -28,7 +28,7 @@ def timeit(method):
         ts = time.time()
         result = method(*args, **kw)
         te = time.time()
-        print("# +++ %r %2.2f sec" % (method.__name__, te - ts), str(args)[40])
+        print("# +++ %r %2.2f sec" % (method.__name__, te - ts), str(args)[:40])
         return result
 
     return timed
